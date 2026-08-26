@@ -559,3 +559,449 @@ footer {
 .project-card:hover .project-image img {
     transform: scale(1.04);
 }
+.project-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.github-link {
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.github-link:hover {
+    opacity: 0.6;
+}
+/* =========================================
+   FIX PROJECT CARDS
+========================================= */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.project-card {
+    display: block;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: #111;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-type {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.project-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.project-content p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.project-tech {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.project-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-link,
+.github-link {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.github-link {
+    text-decoration: underline;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+}
+/* =====================================================
+   FINAL FIX — PROJECT CARDS
+===================================================== */
+
+.projects-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 40px !important;
+    width: 100% !important;
+}
+
+
+/* EACH PROJECT MUST BE ONE COMPLETE CARD */
+
+.projects-container .project-card {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+
+    background: #ffffff !important;
+    text-decoration: none !important;
+    color: #111 !important;
+
+    border: 1px solid #ddd !important;
+    overflow: hidden !important;
+
+    grid-column: auto !important;
+}
+
+
+/* PROJECT IMAGE */
+
+.projects-container .project-card .project-image {
+    display: block !important;
+
+    width: 100% !important;
+    height: 260px !important;
+
+    min-width: 0 !important;
+
+    overflow: hidden !important;
+    background: #111 !important;
+}
+
+
+/* IMAGE */
+
+.projects-container .project-card .project-image img {
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100% !important;
+
+    object-fit: cover !important;
+}
+
+
+/* PROJECT CONTENT */
+
+.projects-container .project-card .project-content {
+    display: block !important;
+
+    width: 100% !important;
+    box-sizing: border-box !important;
+
+    padding: 25px !important;
+}
+
+
+/* PROJECT TYPE */
+
+.projects-container .project-card .project-type {
+    display: block !important;
+
+    margin: 0 0 10px 0 !important;
+
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+}
+
+
+/* TITLE */
+
+.projects-container .project-card .project-content h3 {
+    margin: 0 0 12px 0 !important;
+
+    font-size: 22px !important;
+}
+
+
+/* DESCRIPTION */
+
+.projects-container .project-card .project-content p {
+    margin: 0 0 15px 0 !important;
+
+    line-height: 1.7 !important;
+}
+
+
+/* TECHNOLOGIES */
+
+.projects-container .project-card .project-tech {
+    display: block !important;
+
+    margin: 15px 0 0 0 !important;
+}
+
+
+/* BUTTONS */
+
+.projects-container .project-card .project-buttons {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 20px !important;
+
+    margin-top: 20px !important;
+}
+
+
+/* LIVE LINK */
+
+.projects-container .project-card .project-link {
+    display: inline-block !important;
+
+    font-size: 14px !important;
+    font-weight: 700 !important;
+}
+
+
+/* GITHUB */
+
+.projects-container .project-card .github-link {
+    display: inline-block !important;
+
+    font-size: 14px !important;
+    font-weight: 700 !important;
+
+    text-decoration: underline !important;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .projects-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .projects-container .project-card {
+        width: 100% !important;
+    }
+
+    .projects-container .project-card .project-image {
+        height: 220px !important;
+    }
+
+}
+/* =====================================================
+   FINAL PROJECT CARD DESIGN
+===================================================== */
+
+.projects-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+
+.project-card {
+    width: 100%;
+    background: #fff;
+
+    border: 1px solid #e5e5e5;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* IMAGE */
+
+.project-image {
+    width: 100%;
+    height: 260px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111;
+    color: #fff;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+
+.project-card:hover .project-image img {
+    transform: scale(1.04);
+}
+
+
+/* CONTENT */
+
+.project-content {
+    padding: 28px;
+}
+
+
+.project-type {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #777;
+
+    margin-bottom: 10px;
+}
+
+
+.project-content h3 {
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+
+.project-content p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+
+.project-tech {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+/* BUTTONS */
+
+.project-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.project-link {
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.github-link {
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: underline;
+}
+
+
+.project-link:hover {
+    opacity: 0.6;
+}
+
+
+.github-link:hover {
+    opacity: 0.6;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+}
